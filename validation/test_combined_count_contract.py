@@ -1,8 +1,7 @@
-"""Stored benchmark counts stay raw, as specified by data/README.md.
+"""Preserve the pinned combined artifact's observed count-plus-one encoding.
 
-Applications, not serialized artifacts, own the unit pseudocount. This checks
-the retained published cohort without fitting models or reconstructing omitted
-generation records.
+This checks retained data and conversion expressions, not estimator execution
+or the historical author's intent. Individual raw-count loaders are unchanged.
 """
 
 import ast

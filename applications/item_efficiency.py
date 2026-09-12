@@ -57,7 +57,8 @@ def update_indi_fixed_all_irt(theta_old, R, a, b, sigma2=1.0):
     return theta_new
 
 binary_array = binary_df.to_numpy()
-cot_array = cot_df.to_numpy(dtype=float) + 1.0
+# The versioned combined artifact already includes its unit pseudocount.
+cot_array = cot_df.to_numpy(dtype=float)
 
 N, J = binary_array.shape
 

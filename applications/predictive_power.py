@@ -27,7 +27,8 @@ def load_combined_benchmarks() -> tuple[np.ndarray, np.ndarray]:
         )
     if not response.index.equals(latency.index):
         raise ValueError("combined response and latency rows do not match")
-    return response.to_numpy(), latency.to_numpy(dtype=float) + 1.0
+    # The versioned combined artifact already includes its unit pseudocount.
+    return response.to_numpy(), latency.to_numpy(dtype=float)
 
 
 binary_array, cot_array = load_combined_benchmarks()
