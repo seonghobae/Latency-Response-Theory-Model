@@ -66,3 +66,15 @@ Run `python -I validation/test_combined_count_contract.py` from the checkout.
 No dependency installation is needed for this bounded check. The inspected
 CO interpreter lacked pandas; the bundled analysis interpreter lacked scipy.
 Full application and estimator integration therefore remain unverified.
+
+Follow-up at `c1321bf4f5ba72c8835e0fd10eec6244230e2621`: the installed
+analysis runtime (numpy 2.3.5, pandas 2.2.3) passed two real-pandas loading
+tests in 0.250s. Run `python -I validation/test_combined_pandas_loading.py`
+with those dependencies available. The exact extracted predictive loader
+preserves all 12,800 encoded values, their logs are finite, and its shape and
+row-order rejection checks pass. This is not a full module import or an
+estimator run. The two stdlib tests also passed in 0.062s at the same head.
+No dependency was installed. At prior head `2b91c30`, the changed encoding
+paragraph in `data/README.md` was directly inspected in GitHub's browser
+preview at 1265 × 712, English, without observed clipping or overlap; the
+semantic audit table and other viewport sizes were not part of that receipt.
