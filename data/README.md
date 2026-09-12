@@ -19,6 +19,12 @@ For each benchmark, rows are evaluated model/prompt combinations and columns are
 `correctness_matrix_*.csv` contains 0/1 scores. `cot_length_matrix_*.csv` contains token counts
 for the generated reasoning before the final boxed answer. Application scripts add one to counts
 before taking logarithms, preserving rows where generation yielded a zero count.
+The versioned `cot_length_matrix_combined.csv` is an exception: its values
+already equal the corresponding individual benchmark counts plus one.
+Predictive-power and item-efficiency applications consume this encoded matrix
+unchanged before logarithms. Individual benchmark applications still add one.
+Do not substitute a newly generated raw-count combined CSV without an explicit
+encoding conversion; positivity alone cannot distinguish the representations.
 
 ## Post-processed application data
 

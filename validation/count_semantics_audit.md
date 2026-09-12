@@ -1,6 +1,6 @@
 # Count semantics audit
 
-Status: provenance probe; no artifact or estimator correction applied.
+Status: local consumer correction; artifact and estimator remain unchanged.
 Source revision: `8cb9639eb162ff3732df82d4e190e7f902bde19d`.
 
 | Boundary | Evidence | Established meaning | Remaining uncertainty |
@@ -49,3 +49,20 @@ combined-count encoding decision. Local tags are absent and the public
 reported no releases on 2026-09-12. No historical intention is inferred from
 that absence. The finding remains an artifact-provenance gap, not authority
 to numerically rewrite published data.
+
+## Selected compatibility contract and verification
+
+Preserve the versioned combined artifact as count-plus-one and remove only
+the extra increment in its two application consumers. This explicit
+compatibility decision does not establish historical author intent. Raw
+individual benchmark paths and all stored data remain unchanged.
+At `911fcb1`, the exact two conversion expressions failed all six scalar
+checks. At `3c52a82a8ac728c696a080f9ac2cf880094858d6`, both unittest methods
+passed in 0.068s: all 25,600 retained artifact cells and six conversion cases.
+The scalar frame is a test double; this does not prove pandas or estimator
+integration, runtime finiteness, model accuracy, or paper-result reproduction.
+
+Run `python -I validation/test_combined_count_contract.py` from the checkout.
+No dependency installation is needed for this bounded check. The inspected
+CO interpreter lacked pandas; the bundled analysis interpreter lacked scipy.
+Full application and estimator integration therefore remain unverified.
