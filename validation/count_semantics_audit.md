@@ -28,3 +28,24 @@ Preserve the historical artifact until its encoding is explicitly resolved.
 Neither blindly subtracting one nor changing the estimator follows from this
 probe. A repair must declare the representation and validate exactly one
 count-to-positive-input conversion in both consumers.
+
+## Git provenance follow-up
+
+The non-shallow checkout traces the combined length artifact to
+`a73d231f6763cf8003bf739012105b6edf831ad7` (publication-repository import).
+Its blob `a6d35edec04e665780f6af9cba0eeb1ef73d9aab` is identical at the
+pinned current upstream revision. There is no subsequent numeric artifact
+change in the inspected path history. The initial notebook already contains
+concatenation, array increment and frame export in zero-based cells 99–101;
+the export then targeted `Analysis/data_original/` rather than the current
+repository benchmark directory. This narrows the chronology but does not
+prove which environment executed it or whether shared-array mutation occurred.
+
+The current predictive loader was introduced with its additional unit shift
+in `9955276674a24163a3abae639a6ee64e7e7a4d9a`, after the artifact import.
+Its commit message describes alignment with the paper, without an explicit
+combined-count encoding decision. Local tags are absent and the public
+[release page](https://github.com/Toby-X/Latency-Response-Theory-Model/releases)
+reported no releases on 2026-09-12. No historical intention is inferred from
+that absence. The finding remains an artifact-provenance gap, not authority
+to numerically rewrite published data.
