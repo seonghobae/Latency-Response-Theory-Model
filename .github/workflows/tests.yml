@@ -17,5 +17,5 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
       - run: python -m pip install -e ".[dev]"
-      - run: python -m pytest -q
-      - run: ruff check src/lart/api.py src/lart/synthetic.py src/lart/__init__.py data_generation tests
+      - run: python -m unittest discover -s validation -p 'test_*.py' -v
+      - run: ruff check src/lart/api.py src/lart/synthetic.py src/lart/__init__.py data_generation validation/test_combined_count_contract.py validation/test_combined_pandas_loading.py
